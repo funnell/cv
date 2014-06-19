@@ -1,0 +1,170 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Numbers={OldStyle}]{Linux Libertine O}
+\setmonofont[Scale=0.8]{Monaco}
+
+% ---- CUSTOM COMMANDS
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\footnotesize #1}}
+% uncomment to left-align years
+%\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\bfseries\upshape\Large\textsc}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Tyler Funnell-CV},
+	pdfauthor={Tyler Funnell},
+	pdfproducer={Tyler Funnell}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\huge Tyler Funnell}\\[0.75cm]
+Vancouver, Canada\\[.1cm]
+(604) 999--3511\\[.1cm]
+\href{mailto:tyler.funnell@gmail.com}{tyler.funnell@gmail.com}\\
+\medskip
+
+%\hrule
+\section*{Education}
+\noindent
+\years{Since 2011}\textbf{\textsc{MSc} Bioinformatics Candidate}\\
+University of British Columbia\\
+
+\years{2004--2009}\textbf{\textsc{BSc} Computer Science}\\
+University of Northern British Columbia\\
+
+\years{2007--2008}\textbf{Certificate Japanese Studies}\\
+Osaka International University\\
+
+%%\hrule
+\section*{Experience}
+\noindent
+\years{Since 2012}\textbf{\textsc{MSc} Candidate}\\
+Shah Lab, BCCRC, Vancouver, Canada\\
+
+\years{2012}\textbf{Rotation Student}\\
+Gaffney Lab, Wellcome Trust Sanger Institute, Hinxton, UK\\
+
+\years{2012}\textbf{Rotation Student}\\
+Wasserman Lab, CMMT, Vancouver, Canada\\
+
+\years{2011}\textbf{Rotation Student}\\
+Pavlidis Lab, CHiBi, Vancouver, Canada\\
+
+\years{2009--2011}\textbf{Software Engineer}\\
+Goldstream Publishing Inc., Prince George, Canada\\
+
+\years{2005--2009}\textbf{Student Lab Assistant}\\
+UNBC Help Desk, Prince George, Canada\\
+
+\years{2007--2008}\textbf{English Tutor}\\
+Osaka, Japan\\
+
+\years{Summer 2007}\textbf{Data Integrity Tester}\\
+Northern Health (Health Link North project), Prince George, Canada\\
+
+\years{Summer 2006}\textbf{Research Assistant}\\
+UNBC Professors Desanka and Jernej Polajnar, Prince George, Canada\\
+
+%\hrule
+\section*{Awards}
+\noindent
+\years{2014}\textbf{Mitacs Accelerate}\\
+\$15,000\\
+Awarded to qualified research projects following expert review.\\
+
+\years{2012}\textbf{College for Interdisciplinary Studies Graduate Award}\\
+\$415.61\\
+Awarded based on academic merit.\\
+
+\years{2011}\textbf{CIHR/MSFHR Bioinformatics Training Program for Health Research}\\
+\$22,000/year; 2 years\\
+Awarded based on academic merit.\\
+
+\years{2011}\textbf{College for Interdisciplinary Studies Graduate Award}\\
+\$2,000\\
+Awarded based on academic merit.\\
+
+\years{2007}\textbf{One World Scholarship - Irving K. Barber British Columbia Scholarship Society}\\
+\$3,000
+Awarded based on academic merit, the students' educational objectives, institutional and/or community involvement, and readiness for participation in an overseas exchange program.\\
+
+\years{2007}\textbf{UNBC In-course Scholarship}\\
+\$1,200\\
+Awarded based on academic excellence.\\
+
+\years{2006}\textbf{UNBC In-course Scholarship}\\
+\$1,200\\
+Awarded based on academic excellence.\\
+
+\years{2005}\textbf{UNBC In-course Scholarship}\\
+\$1,200\\
+Awarded based on academic excellence.\\
+
+\years{2004}\textbf{Academic Excellence Award}\\
+\$536.46\\
+Awarded based on academic excellence. Tuition waiver for one 3-credit course, application fee waived for UNBC.\\
+
+\years{2004}\textbf{Provincial Scholarship Award}\\
+\$1,000\\
+Awarded to high school graduates based on provincial exam results.\\
+
+\years{2004}\textbf{Innovation Resource Centre Scholarship}\\
+\$500\\
+Awarded to students who plan to pursue a degree in a technology related field.\\
+
+\years{2004}\textbf{Nukko Lake Elementary Scholarship}\\
+\$250\\
+Awarded to students based on academic excellence and financial need.\\
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today}
+%\href{http://www.tylerfunnell.me/cv}{http://www.tylerfunnell.me/cv}}
+\end{center}
+
+\end{document}
