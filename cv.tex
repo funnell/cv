@@ -28,7 +28,12 @@
 \setromanfont[Numbers={OldStyle}]{Linux Libertine O}
 \setmonofont[Scale=0.8]{Monaco}
 
+% typeographical improvements
 \usepackage{microtype}
+
+% remove spacing around lists
+\usepackage{enumitem}
+\setlist{nolistsep}
 
 % ---- CUSTOM COMMANDS
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
@@ -40,7 +45,7 @@
 % uncomment to left-align years
 %\renewcommand*{\raggedleftmarginnote}{}
 \setlength{\marginparsep}{7pt}
-\reversemarginpar
+\reversemarginpar{}
 
 % HEADINGS
 \usepackage{sectsty} 
@@ -75,39 +80,73 @@ University of British Columbia\\
 
 \years{2004--2009}\textbf{\textsc{BSc} Computer Science}\\
 University of Northern British Columbia\\
+GPA 3.99\\
 
 \years{2007--2008}\textbf{Certificate Japanese Studies}\\
 Osaka International University\\
+Graduated top of class\\
 
 %%\hrule
 \section*{Experience}
 \noindent
 \years{Since 2012}\textbf{\textsc{MSc} Candidate}\\
-Shah Lab, BCCRC, Vancouver, Canada\\
+Shah Lab, BCCRC, Vancouver, Canada
+\begin{itemize}
+    \item Studying regulation of mRNA processing.\\
+\end{itemize}
 
 \years{2012}\textbf{Rotation Student}\\
-Gaffney Lab, Wellcome Trust Sanger Institute, Hinxton, UK\\
+Gaffney Lab, Wellcome Trust Sanger Institute, Hinxton, UK
+\begin{itemize}
+    \item Investigated the relationships between promoter features in lymphoblastoid cells and their effect on gene expression.\\
+\end{itemize}
 
 \years{2012}\textbf{Rotation Student}\\
-Wasserman Lab, CMMT, Vancouver, Canada\\
+Wasserman Lab, CMMT, Vancouver, Canada
+\begin{itemize}
+    \item Analyzed mouse cerebellum transcriptome time-course data to identify transcription factors essential to cerebellum development.\\
+\end{itemize}
 
 \years{2011}\textbf{Rotation Student}\\
-Pavlidis Lab, CHiBi, Vancouver, Canada\\
+Pavlidis Lab, CHiBi, Vancouver, Canada
+\begin{itemize}
+    \item Worked on a method for measuring accuracy of metrics comparing ``interesting'' gene lists obtained from studies performing differential gene expression analysis.\\
+\end{itemize}
 
 \years{2009--2011}\textbf{Software Engineer}\\
-Goldstream Publishing Inc., Prince George, Canada\\
+Goldstream Publishing Inc., Prince George, Canada
+\begin{itemize}
+    \item Designed and helped implement a new web-based method of organizing and searching data based on that data's geospatial footprint.
+    \item Developed ways of generating geospatial meta-data and searching the stored information in a way that is intuitive to the user and provides useful results.\\
+\end{itemize}
 
 \years{2005--2009}\textbf{Student Lab Assistant}\\
-UNBC Help Desk, Prince George, Canada\\
+UNBC Help Desk, Prince George, Canada
+\begin{itemize}
+    \item Provided user support for university computer and internet services.
+    \item Monitored computer labs and printers, ensuring users experienced a certain quality of service.\\
+\end{itemize}
 
 \years{2007--2008}\textbf{English Tutor}\\
-Osaka, Japan\\
+Osaka, Japan
+\begin{itemize}
+    \item Assisted with teaching children of various ages, helping increase exposure to the English language and western culture.
+    \item Taught private English lessons for adults, improving ability of the student to communicate effectively with English speakers.\\
+\end{itemize}
 
 \years{Summer 2007}\textbf{Data Integrity Tester}\\
-Northern Health (Health Link North project), Prince George, Canada\\
+Northern Health (Health Link North project), Prince George, Canada
+\begin{itemize}
+    \item Tested functionality and data integrity of the Cerner ERM (Electronic Registration Management) solution.
+    \item Regularly conferred with ERM team members to ensure accuracy of ERM solution’s functionality and data.\\
+\end{itemize}
 
 \years{Summer 2006}\textbf{Research Assistant}\\
-UNBC Professors Desanka and Jernej Polajnar, Prince George, Canada\\
+UNBC Professors Desanka and Jernej Polajnar, Prince George, Canada
+\begin{itemize}
+    \item Developed Java software components for research project.
+    \item Assisted in developing algorithms used in software simulation.\\
+\end{itemize}
 
 %\hrule
 \section*{Awards}
