@@ -15,6 +15,41 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage{fontspec} 
 
+% BIBLIOGRAPHY
+\usepackage[
+    backend=biber,
+    style=nature,
+    minbibnames=6,
+    maxbibnames=6,
+    sorting=ydnt % sort by year (descending), name, title
+]{biblatex}
+\addbibresource{cv.bib}
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+
+\usepackage{xpatch}
+
+\newbibmacro*{name:bold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+\renewcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}
+  {{45c3ed3a9a072c68102ba07390fe7955}}
+
 % DOCUMENT LAYOUT
 \usepackage{geometry} 
 \geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
@@ -69,7 +104,7 @@
 {\huge Tyler Funnell}\\[0.75cm]
 Vancouver, Canada\\[.1cm]
 (604) 999--3511\\[.1cm]
-\href{mailto:tyler.funnell@gmail.com}{tyler.funnell@gmail.com}\\
+\href{mailto:tyler.funnell@gmail.com}{tyler.funnell@gmail.com}
 \medskip
 
 %\hrule
@@ -87,9 +122,13 @@ GPA 3.99\\
 
 \years{2007--2008}\textbf{Certificate Japanese Studies}\\
 Osaka International University\\
-Graduated top of class\\
+Graduated top of class
 
-%%\hrule
+%\hrule
+\nocite{*}
+\printbibliography[type=article,title={Publications}]
+
+%\hrule
 \section*{Experience}
 \noindent
 \years{Since 2015}\textbf{\textsc{PhD} Student}\\
@@ -102,6 +141,24 @@ Shah Lab, BCCRC, Vancouver, Canada
 Shah Lab, BCCRC, Vancouver, Canada
 \begin{itemize}
     \item Studied regulation of mRNA processing.\\
+\end{itemize}
+
+\years{2012--2014}\textbf{Bioinformatics Graduate Program Student Mentor}\\
+Vancouver, Canada
+\begin{itemize}
+    \item Provided academic and other advice to incoming bioinformatics students.\\
+\end{itemize}
+
+\years{2013}\textbf{INK Journal Reviewer}\\
+Vancouver, Canada
+\begin{itemize}
+    \item Reviewed non-academic articles.\\
+\end{itemize}
+
+\years{2012--2013}\textbf{Bioinformatics/IOP Retreat Committee Member}\\
+Vancouver, Canada
+\begin{itemize}
+    \item Various duties, including organizing an expert panel discussion.\\
 \end{itemize}
 
 \years{2012}\textbf{Rotation Student}\\
@@ -119,7 +176,7 @@ Wasserman Lab, CMMT, Vancouver, Canada
 \years{2011}\textbf{Rotation Student}\\
 Pavlidis Lab, CHiBi, Vancouver, Canada
 \begin{itemize}
-    \item Worked on a method for measuring accuracy of metrics comparing ``interesting'' gene lists obtained from studies performing differential gene expression analysis.\\
+    \item Worked on a method for measuring accuracy of metrics comparing gene lists obtained from studies performing differential gene expression analysis.\\
 \end{itemize}
 
 \years{2009--2011}\textbf{Software Engineer}\\
@@ -154,12 +211,18 @@ Northern Health (Health Link North project), Prince George, Canada
 UNBC Professors Desanka and Jernej Polajnar, Prince George, Canada
 \begin{itemize}
     \item Developed Java software components for research project.
-    \item Assisted in developing algorithms used in software simulation.\\
+    \item Assisted in developing algorithms used in software simulation.
 \end{itemize}
 
 %\hrule
 \section*{Awards}
 \noindent
+\years{2017}\textbf{Faculty of Science Graduate Award}\\
+\$3,465.00\\
+
+\years{2016}\textbf{Faculty of Science Graduate Award}\\
+\$5,557.66\\
+
 \years{2015}\textbf{Faculty of Science Graduate Award}\\
 \$3,236.22\\
 
