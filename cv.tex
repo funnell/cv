@@ -12,8 +12,9 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt, a4paper]{article}
 \usepackage{fontspec} 
+\usepackage{titlesec}
 
 % BIBLIOGRAPHY
 \usepackage[
@@ -60,7 +61,7 @@
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
-\usepackage[oldstyle]{libertine}
+% \usepackage[oldstyle]{libertine}
 \setmonofont[Scale=0.8]{Monaco}
 
 % typeographical improvements
@@ -83,11 +84,16 @@
 \reversemarginpar{}
 
 % HEADINGS
-\usepackage{sectsty} 
-\usepackage[normalem]{ulem} 
-\sectionfont{\bfseries\upshape\Large\textsc}
-\subsectionfont{\mdseries\scshape\normalsize} 
-\subsubsectionfont{\mdseries\upshape\large} 
+% \usepackage{sectsty} 
+% \usepackage[normalem]{ulem} 
+% \sectionfont{\bfseries\upshape\Large\textsc}
+% \subsectionfont{\mdseries\scshape\normalsize} 
+% \subsubsectionfont{\mdseries\upshape\large} 
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
 
 % PDF SETUP
 % ---- FILL IN HERE THE DOC TITLE AND AUTHOR
@@ -103,13 +109,14 @@
 \begin{document}
 {\huge Tyler Funnell}\\[0.75cm]
 New York, USA\\[.1cm]
++1 (347) 416-2020\\[.1cm]
 \href{mailto:tyler.funnell@gmail.com}{tyler.funnell@gmail.com}
 \medskip
 
 %\hrule
 \section*{Education}
 \noindent
-\years{Since 2015}\textbf{\textsc{PhD} Candidate Computational Biology and Medicine}\\
+\years{Since 2015}\textbf{\textsc{PhD} Candidate Computational Biology and Medicine (2021)}\\
 Weill Cornell Medicine\\
 
 \years{2011--2014}\textbf{\textsc{MSc} Bioinformatics}\\
@@ -127,26 +134,23 @@ Graduated top of class
 \nocite{*}
 \printbibliography[type=article,title={Publications}]
 
+\newpage
+
 %\hrule
 \section*{Experience}
 \noindent
-\years{Since 2018}\textbf{\textsc{PhD} Student}\\
+\years{Since 2018}\textbf{Graduate Research Assistant}\\
 Shah Lab, MSKCC, New York, USA
 \begin{itemize}
-    \item Developed machine learning approaches for detecting mutation signatures.
-    \item Implemented computational workflows for analyzing single cell whole genome sequencing data.\\
+    \item Developed the use of topic models for detecting mutation signatures in cancer genomes. The resulting Julia package has been used by several other projects in the Shah Lab.
+    \item Implemented computational workflows, visualizations, and statistical analyses for single cell and bulk DNA sequencing data using Python and R. Presented results in manuscripts and at international conference talks. \\
 \end{itemize}
 
-\years{2015--2018}\textbf{\textsc{PhD} Student}\\
+\years{2012--2018}\textbf{Graduate Research Assistant}\\
 Shah Lab, BCCRC, Vancouver, Canada
 \begin{itemize}
+    \item Lead the computational analysis of a research project, working closely with scientists at Takeda Pharmaceutical Company to study the effects of a small molecule RNA processing inhibitor.
     \item Transferred to Weill Cornell Medicine.\\
-\end{itemize}
-
-\years{2012--2014}\textbf{\textsc{MSc} Student}\\
-Shah Lab, BCCRC, Vancouver, Canada
-\begin{itemize}
-    \item Lead the analysis of an mRNA processing study in collaboration with Takeda Pharmaceuticals.\\
 \end{itemize}
 
 \years{2012--2014}\textbf{Bioinformatics Graduate Program Student Mentor}\\
@@ -188,8 +192,9 @@ Pavlidis Lab, CHiBi, Vancouver, Canada
 \years{2009--2011}\textbf{Software Engineer}\\
 Goldstream Publishing Inc., Prince George, Canada
 \begin{itemize}
-    \item Designed and implemented a web-based method of organizing and searching data based on its geospatial footprint.
-    \item Developed ways of generating geospatial meta-data and searching the stored information in a way that is intuitive to the user and provides meaningful results.\\
+    \item Designed and implemented a web application for organizing and searching geospatial data, which increased ad revenue.
+    \item Designed and implemented a PostgreSQL database for a geospatial web application.
+    \item Wrote the use-case document used to guide development of a new web application. Improved development workflow within the company by promoting best practices, \textit{e.g.} git-based version control.\\
 \end{itemize}
 
 %\years{2005--2009}\textbf{Student Lab Assistant}\\
@@ -234,7 +239,7 @@ UNBC Professors Desanka and Jernej Polajnar, Prince George, Canada
 
 \years{2014}\textbf{Mitacs Accelerate}\\
 \$15,000\\
-Awarded to qualified research projects following expert review.\\
+Awarded to qualified research projects collaborating with industry.\\
 
 \years{2012}\textbf{College for Interdisciplinary Studies Graduate Award}\\
 \$415.61\\
@@ -242,14 +247,15 @@ Awarded based on academic merit.\\
 
 \years{2011}\textbf{CIHR/MSFHR Bioinformatics Training Program for Health Research}\\
 % \$22,000/year; 2 years\\
-\$44,000
+\$44,000\\
 Awarded based on academic merit.\\
+\newpage
 
 \years{2011}\textbf{College for Interdisciplinary Studies Graduate Award}\\
 \$2,000\\
 Awarded based on academic merit.\\
 
-\years{2007}\textbf{One World Scholarship --- Irving K. Barber British Columbia Scholarship\\Society}\\
+\years{2007}\textbf{One World Scholarship --- Irving K. Barber British Columbia Scholarship Society}\\
 \$3,000\\
 Awarded based on academic merit, the students' educational objectives, institutional and/or community involvement, and readiness for participation in an overseas exchange program.\\
 
@@ -265,13 +271,13 @@ Awarded based on academic excellence.\\
 \$1,200\\
 Awarded based on academic excellence.\\
 
-\years{2004}\textbf{Academic Excellence Award}\\
-\$536.46\\
-Awarded based on academic excellence. Tuition waiver for one 3-credit course, application fee waived for UNBC.\\
+% \years{2004}\textbf{Academic Excellence Award}\\
+% \$536.46\\
+% Awarded based on academic excellence. Tuition waiver for one 3-credit course, application fee waived for UNBC.\\
 
-\years{2004}\textbf{Provincial Scholarship Award}\\
-\$1,000\\
-Awarded to high school graduates based on provincial exam results.\\
+% \years{2004}\textbf{Provincial Scholarship Award}\\
+% \$1,000\\
+% Awarded to high school graduates based on provincial exam results.\\
 
 % \years{2004}\textbf{Innovation Resource Centre Scholarship}\\
 % \$500\\
